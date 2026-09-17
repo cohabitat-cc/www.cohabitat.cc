@@ -157,6 +157,14 @@ permalink: /a-propos/
           <p>En cas de dissolution, transfert impératif de la totalité de l'actif résiduel à des OBNL, fiducies d'utilité sociale foncières ou coopératives poursuivant des buts similaires au Québec.</p>
         </div>
       </div>
+
+      <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 14px; padding: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-primary); margin: 0 0 0.35rem;">Règlements généraux proposés (versionnés sur GitHub)</h4>
+          <p style="font-size: 0.95rem; color: var(--color-muted); margin: 0;">Notre cadre juridique est ouvert et collaboratif. Vous pouvez lire l'ensemble des statuts ou proposer des amendements via Pull Request.</p>
+        </div>
+        <a href="{{ '/reglements/' | relative_url }}" class="action-btn" style="white-space: nowrap;">Consulter les règlements &rarr;</a>
+      </div>
     </div>
 
     <!-- Section 4 : Requérants et premiers administrateurs -->
