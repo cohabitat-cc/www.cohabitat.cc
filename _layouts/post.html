@@ -35,6 +35,9 @@ layout: default
   <div class="post-featured-image-wrapper">
     <div class="site-container">
       <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-featured-image">
+      {% if page.image_caption %}
+        <p class="post-featured-image-caption"><em>{{ page.image_caption }}</em></p>
+      {% endif %}
     </div>
   </div>
   {% endif %}

@@ -887,6 +887,15 @@ body.site-body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
+.post-featured-image-caption {
+    text-align: center;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+    margin-top: 0.85rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
 .post-body {
     font-size: 1.12rem;
     line-height: 1.8;
