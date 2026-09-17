@@ -13,6 +13,25 @@ social:
   email: "joindre@cohabitat.cc"
 contact_email: "joindre@cohabitat.cc"
 contact_button_text: "Nous contacter"
+philosophie_cc:
+  - title: "Club Cycliste"
+    icon: "🚲"
+    desc: "Une vie structurée autour de la mobilité active et l'abandon de la voiture privée au profit d'une qualité de vie réelle."
+  - title: "Communauté Cohabitat"
+    icon: "🏡"
+    desc: "La cohabitation valorise la richesse relationnelle et le partage d'espaces plutôt que l'accumulation matérielle individuelle."
+  - title: "Carbone Cible"
+    icon: "🎯"
+    desc: "Une cible de sobriété carbone urbaine portée par la densification intelligente, l'absence de voiture privée, des matériaux verts et un accueil social inclusif."
+  - title: "Centre Citoyen"
+    icon: "🏛️"
+    desc: "Avec son café et ses espaces partagés, le bâtiment devient un pôle civique solidaire, ancré dans la mixité sociale et l'entraide de quartier."
+  - title: "Communauté Créative"
+    icon: "✨"
+    desc: "Fablab et ateliers créatifs nourrissent l'innovation collective et font de Cohabitat.cc un terrain d'expérimentation artistique et productive."
+  - title: "Code Commun"
+    icon: "💻"
+    desc: "Les règles et outils de gouvernance sont conçus comme un bien commun auditable et partageable, pour répliquer ce laboratoire social."
 ---
 
 > **Notre mission :** Bâtir un écosystème de vie où chaque membre s'épanouit et s'engage au sein d'une communauté enrichissante et d'un habitat écologique.

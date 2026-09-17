@@ -6,7 +6,22 @@ layout: default
   <div class="site-container text-center">
     {% assign logo_path = page.logo | default: '/android-chrome-192x192.png' %}
     <img src="{{ logo_path | relative_url }}" alt="Logo {{ site.title | default: 'COHABITAT.CC' }}" class="hero-logo" width="120" height="120">
-    <h1 class="hero-title">{{ page.hero_title | default: page.title | default: site.title }}</h1>
+    <h1 class="hero-title">
+      <span class="brand-base">COHABITAT</span><span class="brand-dot">.</span><span class="brand-cc" id="cc-interactive" title="Cliquez pour faire défiler les significations de CC">CC</span>
+    </h1>
+
+    {% if page.philosophie_cc %}
+    <!-- Badge interactif animé CC -->
+    <div class="cc-rotator-wrapper" id="cc-rotator-container" role="button" tabindex="0" title="Cliquez pour changer la signification de CC" data-definitions='{{ page.philosophie_cc | jsonify | escape }}'>
+      <span class="cc-rotator-pill">CC</span>
+      <span class="cc-rotator-arrow">↳</span>
+      <span class="cc-rotator-text" id="cc-rotator-text">
+        <span class="cc-icon">{{ page.philosophie_cc[0].icon }}</span>
+        <strong class="cc-name">{{ page.philosophie_cc[0].title }}</strong>
+      </span>
+    </div>
+    {% endif %}
+
     {% if page.tagline %}
       <p class="hero-tagline">{{ page.tagline }}</p>
     {% elsif site.description %}
@@ -15,6 +30,29 @@ layout: default
     {% include social-icons.html %}
   </div>
 </header>
+
+{% if page.philosophie_cc %}
+<section class="philosophie-section">
+  <div class="site-container">
+    <div class="philosophie-header text-center">
+      <h2 class="philosophie-heading">La philosophie <span class="text-accent">CC</span></h2>
+      <p class="philosophie-subheading">Deux lettres, une double signification qui forge notre identité.</p>
+    </div>
+    <div class="philosophie-grid">
+      {% for item in page.philosophie_cc %}
+      <div class="philosophie-card" data-index="{{ forloop.index0 }}">
+        <div class="philosophie-card-badge">CC</div>
+        <div class="philosophie-card-header">
+          <span class="philosophie-card-icon">{{ item.icon }}</span>
+          <h3 class="philosophie-card-title">{{ item.title }}</h3>
+        </div>
+        <p class="philosophie-card-desc">{{ item.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <div class="site-container markdown-content">
   {{ content }}
@@ -31,3 +69,5 @@ layout: default
   </div>
 </section>
 {% endif %}
+
+<script src="{{ '/assets/js/cc-rotator.js' | relative_url }}"></script>

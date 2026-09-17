@@ -64,9 +64,87 @@ body.site-body {
     font-size: clamp(2.4rem, 5vw, 3.6rem);
     font-weight: 700;
     color: var(--color-primary);
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
     letter-spacing: -0.02em;
     line-height: 1.15;
+}
+
+.brand-cc {
+    color: var(--color-accent);
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.brand-cc:hover {
+    color: var(--color-primary);
+    transform: scale(1.08);
+}
+
+/* ==========================================================================
+   CC Rotator Badge (Hero)
+   ========================================================================== */
+.cc-rotator-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: #ffffff;
+    border: 1.5px solid var(--color-border);
+    border-radius: 9999px;
+    padding: 0.4rem 1.15rem;
+    margin: 0.5rem auto 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cc-rotator-wrapper:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 20px rgba(6, 78, 59, 0.12);
+}
+
+.cc-rotator-pill {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: var(--color-primary);
+    color: #ffffff;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+}
+
+.cc-rotator-arrow {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.cc-rotator-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.98rem;
+    color: var(--color-dark);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    min-width: 200px;
+    text-align: left;
+}
+
+.cc-rotator-text.fade-out {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+.cc-rotator-text.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cc-rotator-text .cc-name {
+    color: var(--color-primary);
 }
 
 .hero-tagline {
@@ -255,6 +333,124 @@ body.site-body {
 
 .markdown-content a:hover {
     color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Philosophie CC Section & Grid
+   ========================================================================== */
+.philosophie-section {
+    margin: 4.5rem 0 2rem;
+    padding: 3.5rem 2rem;
+    background: #064E3B;
+    background: linear-gradient(145deg, #064E3B 0%, #04382a 100%);
+    border-radius: 24px;
+    box-shadow: 0 12px 35px -8px rgba(6, 78, 59, 0.35);
+    color: #F5F5F4;
+}
+
+.philosophie-header {
+    margin-bottom: 2.75rem;
+}
+
+.philosophie-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #ffffff !important;
+    margin: 0 0 0.65rem;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.philosophie-subheading {
+    font-size: 1.15rem;
+    color: #a7f3d0;
+    margin: 0;
+    font-weight: 300;
+}
+
+.philosophie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.philosophie-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 18px;
+    padding: 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.philosophie-card:hover,
+.philosophie-card.active-cc {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #34d399;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), 0 0 15px rgba(52, 211, 153, 0.2);
+}
+
+.philosophie-card.active-cc {
+    border-color: #fb923c;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(251, 146, 60, 0.35);
+}
+
+.philosophie-card-badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #a7f3d0;
+    background: rgba(6, 78, 59, 0.6);
+    border: 1px solid rgba(167, 243, 208, 0.3);
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    letter-spacing: 0.05em;
+}
+
+.philosophie-card.active-cc .philosophie-card-badge {
+    color: #ffffff;
+    background: #c2410c;
+    border-color: #fb923c;
+}
+
+.philosophie-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+}
+
+.philosophie-card-icon {
+    font-size: 1.65rem;
+    line-height: 1;
+}
+
+.philosophie-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: #ffffff !important;
+    margin: 0;
+    font-weight: 600;
+}
+
+.philosophie-card-desc {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.text-accent {
+    color: #fb923c !important;
 }
 
 /* ==========================================================================
