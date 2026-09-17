@@ -23,7 +23,7 @@ contact_button_text: "Nous contacter"
 >
 > *Énoncé de vision*
 
-![Le luxe du futur — Cohabitat]({{ '/assets/images/Le%20luxe%20du%20futur%20left-indent%20text.png' | relative_url }})
+![Concept architectural COHABITAT.CC — Bâtiment écologique, mobilité active et communauté multigénérationnelle]({{ '/assets/images/cohabitat_concept_banner.jpg' | relative_url }})
 
 ---
 
