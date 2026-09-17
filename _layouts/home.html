@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<header class="hero-section">
+  <div class="site-container text-center">
+    {% assign logo_path = page.logo | default: '/android-chrome-192x192.png' %}
+    <img src="{{ logo_path | relative_url }}" alt="Logo {{ site.title | default: 'COHABITAT.CC' }}" class="hero-logo" width="120" height="120">
+    <h1 class="hero-title">{{ page.hero_title | default: page.title | default: site.title }}</h1>
+    {% if page.tagline %}
+      <p class="hero-tagline">{{ page.tagline }}</p>
+    {% elsif site.description %}
+      <p class="hero-tagline">{{ site.description }}</p>
+    {% endif %}
+    {% include social-icons.html %}
+  </div>
+</header>
+
+<div class="site-container markdown-content">
+  {{ content }}
+</div>
+
+{% assign contact_address = page.contact_email | default: page.social.email %}
+{% if contact_address %}
+<section class="cta-section">
+  <div class="site-container text-center">
+    <a href="mailto:{{ contact_address }}" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      <span>{{ page.contact_button_text | default: "Nous contacter" }}</span>
+    </a>
+  </div>
+</section>
+{% endif %}

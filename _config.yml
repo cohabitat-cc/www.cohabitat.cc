@@ -9,7 +9,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# theme: minima
+# plugins:
+#   - jekyll-feed
+#   - jekyll-seo-tag
