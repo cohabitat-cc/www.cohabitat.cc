@@ -3,3 +3,4 @@ _site/
 .jekyll-metadata
 .direnv/
 .sass-cache/
+.DS_Store

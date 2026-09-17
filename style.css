@@ -352,7 +352,7 @@ body.site-body {
     margin-top: 0.4rem;
 }
 
-/* Images */
+/* Images & Figures */
 .markdown-content img {
     max-width: 100%;
     height: auto;
@@ -360,6 +360,20 @@ body.site-body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     margin: 2rem auto;
     display: block;
+}
+
+.markdown-content p:has(> img) {
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content p:has(> img) + p > em:only-child {
+    display: block;
+    text-align: center;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+    margin-top: -0.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
 }
 
 /* Tables */
@@ -866,7 +880,8 @@ body.site-body {
 
 .post-featured-image {
     width: 100%;
-    max-height: 480px;
+    height: auto;
+    max-height: 560px;
     object-fit: cover;
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
