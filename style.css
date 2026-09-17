@@ -1384,3 +1384,289 @@ body.site-body {
     margin: 0 0 1.75rem;
     line-height: 1.6;
 }
+
+/* ==========================================================================
+   About Page (À propos)
+   ========================================================================== */
+.about-hero {
+    padding: 6rem 0 3.5rem;
+    background: linear-gradient(135deg, rgba(6, 78, 59, 0.06) 0%, rgba(194, 65, 12, 0.05) 100%);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.about-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: rgba(6, 78, 59, 0.1);
+    color: var(--color-primary);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.about-hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    color: var(--color-primary);
+    margin: 0 0 1rem;
+    line-height: 1.15;
+}
+
+.about-hero-tagline {
+    font-size: 1.2rem;
+    color: var(--color-muted);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-section {
+    padding: 4.5rem 0;
+}
+
+/* Legal Status Card */
+.legal-status-card {
+    background: #ffffff;
+    border: 2px solid #F59E0B;
+    border-radius: 20px;
+    padding: 2.25rem;
+    margin-bottom: 4.5rem;
+    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.legal-status-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: #F59E0B;
+}
+
+.legal-status-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.legal-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: #FEF3C7;
+    color: #B45309;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.legal-status-pill .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #D97706;
+    animation: statusPulse 2s infinite ease-in-out;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.3); }
+}
+
+.legal-status-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.legal-status-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+}
+
+.legal-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    background: var(--color-secondary);
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+}
+
+.legal-meta-item h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    margin: 0 0 0.35rem;
+}
+
+.legal-meta-item p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/* Section Headings */
+.about-block-title {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin: 0 0 0.75rem;
+}
+
+.about-block-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    margin: 0 0 2.5rem;
+    max-width: 750px;
+    line-height: 1.6;
+}
+
+/* Objects Grid */
+.objects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 4.5rem;
+}
+
+.object-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    padding: 1.85rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.object-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    border-color: rgba(6, 78, 59, 0.3);
+}
+
+.object-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1.1rem;
+}
+
+.object-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+}
+
+.object-card p {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Governance Grid */
+.governance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4.5rem;
+}
+
+.governance-card {
+    background: var(--color-secondary);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 14px 14px 0;
+    padding: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.governance-card:nth-child(even) {
+    border-left-color: var(--color-accent);
+}
+
+.governance-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--color-primary);
+    margin: 0 0 0.5rem;
+}
+
+.governance-card p {
+    font-size: 0.92rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Administrators preview */
+.admin-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 4.5rem;
+}
+
+.admin-preview-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.admin-preview-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--color-border);
+}
+
+.admin-preview-info h4 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--color-primary);
+    margin: 0 0 0.25rem;
+}
+
+.admin-preview-info p {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin: 0 0 0.5rem;
+}
+
+.admin-preview-info a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.admin-preview-info a:hover {
+    text-decoration: underline;
+}

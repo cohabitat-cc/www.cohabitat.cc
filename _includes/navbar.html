@@ -7,6 +7,7 @@
 
     <div class="navbar-nav">
       <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Accueil</a>
+      <a href="{{ '/a-propos/' | relative_url }}" class="nav-link {% if page.url contains '/a-propos' %}active{% endif %}">À propos</a>
       <a href="{{ '/membres/' | relative_url }}" class="nav-link {% if page.url contains '/membres' %}active{% endif %}">Membres</a>
       <a href="{{ '/blogue/' | relative_url }}" class="nav-link {% if page.url contains '/blogue' or page.layout == 'post' %}active{% endif %}">Blogue</a>
       <a href="mailto:joindre@cohabitat.cc" class="nav-btn">Nous joindre</a>
