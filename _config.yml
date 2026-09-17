@@ -1,0 +1,15 @@
+title: "cohabitat.cc"
+description: "Réseau et ressources pour l'habitat partagé et les communs urbains"
+# url: "https://blogue.cohabitat.cc"
+# baseurl: ""  # Laisser vide car le blogue est à la racine de son propre sous-domaine
+url: "https://www.cohabitat.cc"
+baseurl: ""
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
