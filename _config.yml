@@ -4,6 +4,7 @@ description: "Réseau et ressources pour l'habitat partagé et les communs urbai
 # baseurl: ""  # Laisser vide car le blogue est à la racine de son propre sous-domaine
 url: "https://cohabitat.cc"
 baseurl: ""
+image: "/assets/images/cohabitat_concept_banner.jpg"
 markdown: kramdown
 kramdown:
   input: GFM

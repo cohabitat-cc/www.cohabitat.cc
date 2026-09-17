@@ -4,6 +4,7 @@ title: "COHABITAT.CC — Réseau de cohabitats écologiques et résilients"
 hero_title: "COHABITAT.CC"
 tagline: "Bâtir un habitat écologique, solidaire et résilient"
 description: "Bâtir un écosystème de vie où chaque membre s'épanouit et s'engage au sein d'une communauté enrichissante et d'un habitat écologique."
+image: "/assets/images/cohabitat_concept_banner.jpg"
 social:
   facebook: "https://www.facebook.com/profile.php?id=61573297292271"
   linkedin: "https://www.linkedin.com/company/cohabitat-cc"

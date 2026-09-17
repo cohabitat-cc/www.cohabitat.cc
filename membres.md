@@ -2,6 +2,8 @@
 layout: members
 title: "Membres & Co-fondateurs"
 subtitle: "L'équipe fondatrice et les visages engagés derrière cohabitat.cc"
+description: "Découvrez l'équipe fondatrice de cohabitat.cc : bâtisseurs et experts engagés pour l'habitat participatif, la transition socioécologique et la mobilité active."
+image: "/assets/images/cohabitat_concept_banner.jpg"
 permalink: /membres/
 members:
   - name: "Claire Buffet"
