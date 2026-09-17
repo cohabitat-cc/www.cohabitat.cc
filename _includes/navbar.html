@@ -1,0 +1,14 @@
+<nav class="site-navbar">
+  <div class="site-container navbar-inner">
+    <a href="{{ '/' | relative_url }}" class="navbar-brand">
+      <img src="{{ '/android-chrome-192x192.png' | relative_url }}" alt="Logo" class="navbar-logo" width="32" height="32">
+      <span class="navbar-brand-text">COHABITAT<span class="brand-accent">.CC</span></span>
+    </a>
+
+    <div class="navbar-nav">
+      <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Accueil</a>
+      <a href="{{ '/blogue/' | relative_url }}" class="nav-link {% if page.url contains '/blogue' or page.layout == 'post' %}active{% endif %}">Blogue</a>
+      <a href="mailto:joindre@cohabitat.cc" class="nav-btn">Nous joindre</a>
+    </div>
+  </div>
+</nav>

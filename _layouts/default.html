@@ -26,12 +26,21 @@
 
 </head>
 <body class="site-body">
+  {% include navbar.html %}
+
   <main class="site-main">
     {{ content }}
   </main>
 
   <footer class="site-footer">
     <div class="site-container footer-content">
+      <div class="footer-links">
+        <a href="{{ '/' | relative_url }}">Accueil</a>
+        <span class="footer-separator">•</span>
+        <a href="{{ '/blogue/' | relative_url }}">Blogue</a>
+        <span class="footer-separator">•</span>
+        <a href="mailto:joindre@cohabitat.cc">Contact</a>
+      </div>
       <p>&copy; {{ 'now' | date: "%Y" }} <strong>COHABITAT.CC</strong> — Organisme sans but lucratif.</p>
       {% include social-icons.html %}
     </div>

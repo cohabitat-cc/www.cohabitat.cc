@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<article class="post-article">
+  <header class="post-header">
+    <div class="site-container">
+      <a href="{{ '/blogue/' | relative_url }}" class="back-to-blog">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span>Retour au blogue</span>
+      </a>
+
+      {% if page.categories %}
+      <div class="post-tags">
+        {% for cat in page.categories %}
+          <span class="post-tag">{{ cat }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+        <p class="post-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+
+      <div class="post-meta">
+        <span class="post-author">{{ page.author | default: "Équipe cohabitat.cc" }}</span>
+        <span class="post-separator">•</span>
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+      </div>
+    </div>
+  </header>
+
+  {% if page.image %}
+  <div class="post-featured-image-wrapper">
+    <div class="site-container">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-featured-image">
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="site-container post-body markdown-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-article-footer">
+    <div class="site-container">
+      <div class="author-card">
+        <div class="author-info">
+          <h3>COHABITAT.CC — Le Blogue des Communs</h3>
+          <p>Réflexions, carnets de terrain et ressources pour concevoir l'habitat écologique, mutualisé et démocratique de demain.</p>
+        </div>
+        <div class="author-actions">
+          <a href="{{ '/blogue/' | relative_url }}" class="btn btn-secondary">Tous les articles</a>
+          <a href="{{ '/' | relative_url }}" class="btn btn-primary">Découvrir le projet</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</article>
