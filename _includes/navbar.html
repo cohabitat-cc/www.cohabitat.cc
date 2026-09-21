@@ -1,18 +1,36 @@
-<nav class="site-navbar">
+<nav class="site-navbar" aria-label="Navigation principale">
   <div class="site-container navbar-inner">
     <a href="{{ '/' | relative_url }}" class="navbar-brand">
       <img src="{{ '/android-chrome-192x192.png' | relative_url }}" alt="Logo" class="navbar-logo" width="32" height="32">
       <span class="navbar-brand-text">COHABITAT<span class="brand-accent">.CC</span></span>
     </a>
 
-    <div class="navbar-nav">
-      <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Accueil</a>
-      <a href="{{ '/a-propos/' | relative_url }}" class="nav-link {% if page.url contains '/a-propos' %}active{% endif %}">À propos</a>
-      <a href="{{ '/reglements/' | relative_url }}" class="nav-link {% if page.url contains '/reglements' %}active{% endif %}">Règlements</a>
-      <a href="{{ '/projets/' | relative_url }}" class="nav-link {% if page.url contains '/projets' %}active{% endif %}">Projets</a>
-      <a href="{{ '/membres/' | relative_url }}" class="nav-link {% if page.url contains '/membres' %}active{% endif %}">Membres</a>
-      <a href="{{ '/blogue/' | relative_url }}" class="nav-link {% if page.url contains '/blogue' or page.layout == 'post' %}active{% endif %}">Blogue</a>
-      <a href="mailto:joindre@cohabitat.cc" class="nav-btn">Nous joindre</a>
+    <button type="button" 
+            class="navbar-toggle" 
+            id="navbar-toggle" 
+            aria-controls="navbar-menu" 
+            aria-expanded="false" 
+            aria-label="Ouvrir le menu de navigation">
+      <span class="navbar-toggle-box" aria-hidden="true">
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+      </span>
+    </button>
+
+    <div class="navbar-menu" id="navbar-menu">
+      <div class="navbar-nav">
+        <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Accueil</a>
+        <a href="{{ '/a-propos/' | relative_url }}" class="nav-link {% if page.url contains '/a-propos' %}active{% endif %}">À propos</a>
+        <a href="{{ '/reglements/' | relative_url }}" class="nav-link {% if page.url contains '/reglements' %}active{% endif %}">Règlements</a>
+        <a href="{{ '/projets/' | relative_url }}" class="nav-link {% if page.url contains '/projets' %}active{% endif %}">Projets</a>
+        <a href="{{ '/membres/' | relative_url }}" class="nav-link {% if page.url contains '/membres' %}active{% endif %}">Membres</a>
+        <a href="{{ '/blogue/' | relative_url }}" class="nav-link {% if page.url contains '/blogue' or page.layout == 'post' %}active{% endif %}">Blogue</a>
+        <div class="navbar-cta-wrapper">
+          <a href="mailto:joindre@cohabitat.cc" class="nav-btn">Nous joindre</a>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="navbar-backdrop" id="navbar-backdrop" aria-hidden="true"></div>
 </nav>
