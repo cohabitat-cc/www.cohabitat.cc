@@ -2186,3 +2186,29 @@ body.site-body {
     margin: 0 auto;
     line-height: 1.6;
 }
+
+/* Lien icône LinkedIn inline */
+.linkedin-icon-link {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 0.2rem;
+    margin-right: 0.1rem;
+    color: #0A66C2;
+    text-decoration: none;
+    line-height: 1;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.linkedin-icon-link:hover {
+    opacity: 0.8;
+    transform: translateY(-1px) scale(1.1);
+    color: #004182;
+}
+
+.linkedin-icon-link svg {
+    width: 0.9em;
+    height: 0.9em;
+    fill: currentColor;
+    display: inline-block;
+}
